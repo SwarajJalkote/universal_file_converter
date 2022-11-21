@@ -1,4 +1,4 @@
-# Universal File Converter
+# UniCov(Universal File Converter)
 
 This library will take any file as input and convert into any type of file
 
@@ -32,13 +32,14 @@ The documentation includes more detailed [installation instruction](https://pypi
 
 Unicov is run by volunteers from all over the world, with many types of backgrounds. We are always looking for people interested in helping with code development, documentation writing, technical administration, and whatever else comes up.
 
-If you wish to contribute, please first read [CONTRIBUTING.rst](https://github.com/Shanatanu-J/universal_file_converter/blob/main/CONTRIBUTING.md).
+If you wish to contribute, please first read [CONTRIBUTING.md](https://github.com/Shanatanu-J/universal_file_converter/blob/main/CONTRIBUTING.md).
 
 #Distribution Structure
 
 - ```Readme.md``` -- This file.
 - ```LICENSE.md``` -- What you can do with the code. 
 - ```CONTRIBUTER.md``` -- An (incomplete) list of people who helped Unicov in one way or another.
+- ```CONTRIBUTING.md``` -- An overview about how to contribute to Unicov.
 - ```setup.py``` -- Installation file
 - ```MANIFEST.in``` -- Configures which files to include in releases.
  
