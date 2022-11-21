@@ -16,3 +16,5 @@ The following dependencies are required to install NuPIC on all operating system
 - [setuptools](https://setuptools.readthedocs.io) >= 25.2.0
 - [numpy](http://www.numpy.org/)
 - [pandas](https://pandas.pydata.org/)
+
+---
