@@ -7,7 +7,7 @@ This library will take any file as input and convert into any type of file
 #### Output files:
         CSV, DAT, JSON, XML, EXCEL, Parquet, Avro, etc.
 ---
-#Installation
+# Installation
 ### Dependencies
 
 The following dependencies are required to install NuPIC on all operating systems.
@@ -25,9 +25,10 @@ Run the following to install Unicov:
 ```python
 pip install unicov
 ```
-The documentation includes more detailed [installation instructions](https://pypi.org/project/csvtojsonlib/).
+The documentation includes more detailed [installation instruction](https://pypi.org/project/csvtojsonlib/).
+
 ---
-#Contributing, Bug Reports
+# Contributing, Bug Reports
 
 Unicov is run by volunteers from all over the world, with many types of backgrounds. We are always looking for people interested in helping with code development, documentation writing, technical administration, and whatever else comes up.
 
