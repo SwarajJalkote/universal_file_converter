@@ -1,4 +1,4 @@
-![Unicov Logo](logo.jpg)
+![Unicov Logo](logo.png)
 # Unicov (Universal File Converter)
 
 This library will take any file as input and convert into any type of file
