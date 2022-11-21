@@ -11,7 +11,7 @@ This library will take any file as input and convert into any type of file
 # Installation
 ### Dependencies
 
-The following dependencies are required to install NuPIC on all operating systems.
+The following dependencies are required to install Unicov on all operating systems.
 
 - [Python 3.0](https://www.python.org/)
 - [pip](https://pip.pypa.io/en/stable/installing/) >= 8.1.2
