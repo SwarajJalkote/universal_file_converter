@@ -6,7 +6,7 @@ This library will take any file as input and convert into any type of file
         CSV, DAT, JSON, XML, EXCEL, Parquet, Avro, etc.
 #### Output files:
         CSV, DAT, JSON, XML, EXCEL, Parquet, Avro, etc.
-===================
+---
 ### Dependencies
 
 The following dependencies are required to install NuPIC on all operating systems.
