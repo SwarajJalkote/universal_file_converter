@@ -22,6 +22,8 @@ The following dependencies are required to install NuPIC on all operating system
 ### User installation
 Run the following to install Unicov:
 
-`pip install unicov`
+```python
+pip install unicov
+```
 
 The documentation includes more detailed [installation instructions](https://pypi.org/project/csvtojsonlib/).
