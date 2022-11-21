@@ -25,5 +25,10 @@ Run the following to install Unicov:
 ```python
 pip install unicov
 ```
-
 The documentation includes more detailed [installation instructions](https://pypi.org/project/csvtojsonlib/).
+---
+#Contributing, Bug Reports
+
+Unicov is run by volunteers from all over the world, with many types of backgrounds. We are always looking for people interested in helping with code development, documentation writing, technical administration, and whatever else comes up.
+
+If you wish to contribute, please first read [CONTRIBUTING.rst]().
