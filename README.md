@@ -1,4 +1,4 @@
-# UniCov(Universal File Converter)
+# Unicov (Universal File Converter)
 
 This library will take any file as input and convert into any type of file
 
