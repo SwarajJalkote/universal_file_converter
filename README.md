@@ -1,4 +1,5 @@
-![Unicov Logo](logo.png)
+![logo](https://user-images.githubusercontent.com/29909977/203243879-4c846216-7497-4921-b2d8-f31810a90e8f.png)
+
 # Unicov (Universal File Converter)
 
 This library will take any file as input and convert into any type of file
