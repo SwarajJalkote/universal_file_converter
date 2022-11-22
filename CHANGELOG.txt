@@ -1,5 +1,7 @@
 Change Log
 ==========
 
-0.0.1 (2022-11-20)
+0.0.1 (2022-11-22)
 -------------------
+- [Note] No functionality has been added yet.
+- Planning the stucture and functionality of processing all sorts of file types for Unicov.
