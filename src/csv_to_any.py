@@ -1,7 +1,14 @@
 import pandas as pd
-
+import traceback
 class CSVTOANY:
-    def read_csv_file(self, input_filename, input_delimiter, column_names=[]) -> pd.DataFrame:
+    def __init__(self, input_filename, input_delimiter, output_filename, output_delimiter="|", column_names=[]):
+        self.input_filename = input_filename
+        self.input_delimiter = input_delimiter
+        self.output_filename = output_filename
+        self.output_delimiter = output_delimiter
+        self.column_names = column_names
+
+    def read_csv_file(self) -> pd.DataFrame:
         '''
             This function reads the CSV file and converts it into pandas Dataframe.\n
             Description:
@@ -9,23 +16,40 @@ class CSVTOANY:
                 input_del: delimiter used in input file. Default: , (comma)
                 column_names: list of names of columns which you want to extract from csv
         '''
-        if column_names != []:
-            csv_data = pd.read_csv(filepath_or_buffer=input_filename,
-                                sep=input_delimiter,
-                                usecols=column_names,
+        if self.column_names != []:
+            csv_data = pd.read_csv(filepath_or_buffer=self.input_filename,
+                                sep=self.input_delimiter,
+                                usecols=self.column_names,
                                 skip_blank_lines=True,
                                 encoding="UTF-8",
                                 engine="python")
         else:
-            csv_data = pd.read_csv(filepath_or_buffer=input_delimiter,
-                                sep=input_delimiter,
+            csv_data = pd.read_csv(filepath_or_buffer=self.input_delimiter,
+                                sep=self.input_delimiter,
                                 skip_blank_lines=True,
                                 encoding="UTF-8",
                                 engine="python")
         return csv_data
     
-    def csv_to_dat(self):
-        pass
+    def csv_to_dat(self, csv_data):
+        '''
+            This function will convert the Dataframe to dat.\n
+                Description:
+                csv_data: pandas DataFrame returned by read_csv_file()
+                output_path: dat file which will be created as output with expected path
+                output_del: delimiter used in output file: Default: | (pipe)
+        '''
+        if self.output_filename.endswith(".dat"):
+            try:
+                csv_data.to_csv(path_or_buf=self.output_filename, sep=self.output_delimiter, header=True, index=False, mode="w", encoding="UTF-8")
+                return f"File created successfully in {self.output_filename}" 
+            except Exception as exception:
+                print("Exception :", exception)
+                traceback.print_exc()
+        else:
+            raise Exception("Please provide correct path with .dat file")
+
+        return "Failed to provide correct output path"
 
     def csv_to_json(self):
         pass
