@@ -1,12 +1,29 @@
-
+import pandas as pd
 
 class CSVTOANY:
-    def __init__(self, input_filename, input_delimiter, output_filename, output_delimiter):
-        self.input_filename = input_filename
-        self.input_delimiter = input_delimiter
-        self.output_filename = output_filename
-        self.output_delimiter = output_delimiter
-
+    def read_csv_file(self, input_filename, input_delimiter, column_names=[]) -> pd.DataFrame:
+        '''
+            This function reads the CSV file and converts it into pandas Dataframe.\n
+            Description:
+                input_file: csv file which needs to be converted with complete path
+                input_del: delimiter used in input file. Default: , (comma)
+                column_names: list of names of columns which you want to extract from csv
+        '''
+        if column_names != []:
+            csv_data = pd.read_csv(filepath_or_buffer=input_filename,
+                                sep=input_delimiter,
+                                usecols=column_names,
+                                skip_blank_lines=True,
+                                encoding="UTF-8",
+                                engine="python")
+        else:
+            csv_data = pd.read_csv(filepath_or_buffer=input_delimiter,
+                                sep=input_delimiter,
+                                skip_blank_lines=True,
+                                encoding="UTF-8",
+                                engine="python")
+        return csv_data
+    
     def csv_to_dat(self):
         pass
 
