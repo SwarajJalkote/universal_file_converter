@@ -30,4 +30,8 @@ if __name__ == "__main__":
     data = data_obj.read_csv_file()
     print("Data: ", data)
 
+    json_data = data_obj.csv_to_json(data)
+    
+    print("Json: ", json_data)
+
 

@@ -1,5 +1,7 @@
 import pandas as pd
 import traceback
+import json
+
 class CSVTOANY:
     def __init__(self, input_filename, input_delimiter, output_filename, output_delimiter="|", column_names=[]):
         self.input_filename = input_filename
@@ -51,8 +53,30 @@ class CSVTOANY:
 
         return "Failed to provide correct output path"
 
-    def csv_to_json(self):
-        pass
+    def csv_to_json(self, csv_data):
+        '''
+        This function converts the csv file into JSON and takes column_names parameter to filter out the data.\n
+        Description:
+            input_file: csv file which needs to be processed and converted to json
+            input_del: delimiter used in input file. Default: , (comma)
+            column_names: list of names of columns which you want to extract from csv
+        '''
+        
+        json_data = []
+        if csv_data.empty == False:
+            self.column_names = list(csv_data)
+            for indx, col in enumerate(self.column_names):
+                if "Unnamed" in col:
+                    self.column_names[indx] = f"col{indx}"
+
+            for row in csv_data.itertuples(index=False):
+                temp = {}
+                for key, row in zip(self.column_names, list(row)):
+                    temp[key] = row
+                json_data.append(temp)
+        else:
+            return f"Input_File: {self.input_filename} is empty"
+        return json.dumps(json_data, indent=4)
     
     def csv_to_excel(self):
         pass
