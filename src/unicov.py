@@ -1,5 +1,5 @@
 import pandas as pd
-import csv_to_any as csv_proc
+import src.csv_to_any as csv_to_any
 
 class Unicov():
     ''' This class will be used to create a object and then use to read the file data and get it's type'''
@@ -14,8 +14,8 @@ class Unicov():
         ''' This function will get the file type object'''
         response = ""
         if self.input_filename.endswith(".csv"):
-            response = csv_proc.CSVTOANY(self.input_filename, self.input_delimiter, self.output_filename, self.output_delimiter, self.column_names)
-
+            response = csv_to_any.CSVTOANY(self.input_filename, self.input_delimiter, self.output_filename, self.output_delimiter, self.column_names)
+            print(response, type(response))
         elif self.input_filename.endswith(".dat"):
             pass
 
@@ -28,8 +28,8 @@ if __name__ == "__main__":
 
     data_obj = file.get_response()
     data = data_obj.read_csv_file()
-    print("Data: ", data)
-
+    print("Data: ", data, type(data))
+    
     json_data = data_obj.csv_to_json(data)
     
     print("Json: ", json_data)
